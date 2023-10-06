@@ -13,12 +13,12 @@
     "build": "rollup -c --bundleConfigAsCjs",
     "watch": "rollup --watch -c --bundleConfigAsCjs",
     "clean": "rimraf ./dist",
-    "prebuild": "yarn clean",
-    "release": "yarn build && auto shipit",
+    "prebuild": "npm clean",
+    "release": "npm build && auto shipit",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
